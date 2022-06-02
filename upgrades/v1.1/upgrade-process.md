@@ -24,7 +24,7 @@ This is required for all your node (validators, sentries and any other you may h
 
 ## 1. Stop your validator
 First, make sure your node have reached at least the `754525` block height we will use to export the network state and restart from. You can configure your node in advance to stop at this height by setting the `halt-height` parameter in the `app.toml` file and restarting your node.
-In the logs, you will see : `ERR UPGRADE "intent-1" NEEDED at height: 754525`
+In the logs, you will see : `ERR UPGRADE "morocco-1" NEEDED at height: 754525`
 Also ensure that **no process managers (such as `systemd`) will attempt to restart it.**
 
 The exact procedure to stop your node depends on how you configured it so we can't really give a generic way here.
@@ -88,7 +88,7 @@ You're now ready to restart your node
 Start the chtd service
 
 ```
-chtd start --unsafe-skip-upgrades 200
+chtd start --unsafe-skip-upgrades 754525
 ```
 
 Ensure that everything is OK by checking the logs 
